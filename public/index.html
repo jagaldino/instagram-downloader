@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Downloader</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <meta name="description" content="Baixe fotos, vídeos, reels e stories do Instagram facilmente">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Instagram Downloader</h1>
+            <p class="subtitle">Baixe fotos, vídeos, reels e stories do Instagram facilmente</p>
+        </header>
+
+        <main>
+            <section class="input-section">
+                <form id="download-form">
+                    <div class="input-group">
+                        <input 
+                            type="url" 
+                            id="instagram-url" 
+                            placeholder="Cole o URL do Instagram aqui" 
+                            required
+                            pattern="https?://(www\.)?instagram\.com/.*"
+                            title="Insira um URL válido do Instagram">
+                        <button type="submit" id="download-btn">Baixar</button>
+                    </div>
+                    <p class="example">Exemplo: https://www.instagram.com/p/XXXX ou https://www.instagram.com/reel/XXXX</p>
+                </form>
+            </section>
+
+            <section class="preview-section">
+                <div id="loading" class="hidden">
+                    <div class="spinner"></div>
+                    <p>Processando...</p>
+                </div>
+                
+                <div id="error-message" class="hidden">
+                    <p>Ocorreu um erro. Verifique se o URL é válido e tente novamente.</p>
+                </div>
+                
+                <div id="preview-container" class="hidden">
+                    <h2>Prévia</h2>
+                    <div id="media-preview"></div>
+                    <div class="download-options">
+                        <a id="download-link" class="download-button" download>Baixar Mídia</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <section class="instructions">
+            <h2>Como usar</h2>
+            <ol>
+                <li>Copie o URL do post, reel ou story do Instagram que deseja baixar</li>
+                <li>Cole o URL no campo acima</li>
+                <li>Clique em "Baixar"</li>
+                <li>Aguarde o processamento</li>
+                <li>Clique no botão "Baixar Mídia" para salvar o arquivo</li>
+            </ol>
+        </section>
+
+        <footer>
+            <p class="disclaimer">Este serviço é fornecido apenas para uso pessoal. Respeite os direitos autorais e os Termos de Serviço do Instagram.</p>
+            <p class="disclaimer">Ao usar este serviço, você concorda em baixar apenas conteúdo para uso pessoal e não comercial, respeitando os direitos dos criadores.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
